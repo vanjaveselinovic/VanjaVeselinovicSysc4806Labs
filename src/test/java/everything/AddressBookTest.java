@@ -55,6 +55,8 @@ public class AddressBookTest {
         assertEquals(0, addressBook.getBuddies().size());
     }
 
+    /*
+
     @Test
     public void printBuddyByObject() throws Exception {
         addressBook.addBuddy(buddy1);
@@ -87,4 +89,6 @@ public class AddressBookTest {
                 outContent.toString()
         );
     }
+
+    */
 }
