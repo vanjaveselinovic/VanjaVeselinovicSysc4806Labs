@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sysc4806" />
+        <module name="VanjaVeselinovicSysc4806Lab1" />
+        <module name="VanjaVeselinovicSysc4806Lab2" />
+        <module name="VanjaVeselinovicSysc4806Lab4" />
+        <module name="VanjaVeselinovicSysc4806Labs" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sysc4806" target="1.5" />
+      <module name="VanjaVeselinovicSysc4806Lab1" target="1.5" />
+      <module name="VanjaVeselinovicSysc4806Lab2" target="1.8" />
+      <module name="VanjaVeselinovicSysc4806Lab4" target="1.8" />
+      <module name="VanjaVeselinovicSysc4806Labs" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
