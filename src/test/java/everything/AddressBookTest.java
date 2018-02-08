@@ -1,3 +1,5 @@
+package everything;
+
 import everything.AddressBook;
 import everything.BuddyInfo;
 import org.junit.After;

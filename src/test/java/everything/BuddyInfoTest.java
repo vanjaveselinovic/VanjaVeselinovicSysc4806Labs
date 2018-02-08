@@ -1,3 +1,5 @@
+package everything;
+
 import everything.BuddyInfo;
 import org.junit.Test;
 
