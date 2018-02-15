@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Address Book</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script th:src="@{/js/main.js}"></script>
+    </head>
+    <body>
+        <h1>AddressBooks</h1>
+        <ol id="address-books">
+            <li th:each="addressBook : ${addressBooks}"
+                th:inline="text">
+                [['Address book ' + ${addressBook.id}]]
+                Buddies
+                <ol>
+                    <li th:each="buddyInfo : ${addressBook.getBuddies()}"
+                        th:text="${buddyInfo.toString()}"></li>
+                </ol>
+            </li>
+        </ol>
+        <h2>Add buddy to address book</h2>
+        <form id="add-buddy" th:action="@{add-buddy}" method="post">
+            <p>
+                Add buddy with id
+                <input type="text" th:name="buddyInfoId" />
+                to address book with id
+                <input type="text" th:name="addressBookId" />.
+            </p>
+            <p>
+                <input type="submit" value="Add" />
+            </p>
+        </form>
+        <h2>Add new address book</h2>
+        <form id="create-address-book" th:action="@{/create-address-book}" th:object="${addressBook}" method="post">
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </form>
+
+        <h1>Buddies</h1>
+        <ol>
+            <li th:each="buddyInfo : ${buddies}"
+                th:text="${buddyInfo.toString()}"></li>
+        </ol>
+        <h2>Add new buddy</h2>
+        <form id="create-buddy" th:action="@{/create-buddy-info}" th:object="${buddyInfo}" method="post">
+            <p>
+                Name: <input type="text" th:field="*{name}" />
+            </p>
+            <p>
+                Number: <input type="text" th:field="*{number}" />
+            </p>
+            <p>
+                <input type="submit" value="Create" />
+                <input type="reset" value="Reset" />
+            </p>
+        </form>
+    </body>
+</html>

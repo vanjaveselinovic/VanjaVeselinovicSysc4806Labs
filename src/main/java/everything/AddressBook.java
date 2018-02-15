@@ -1,5 +1,7 @@
 package everything;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -61,5 +63,10 @@ public class AddressBook {
             printBuddy(i);
             System.out.println("----------");
         }
+    }
+
+    @ModelAttribute(value = "addressBook")
+    public AddressBook newAddressBook() {
+        return new AddressBook();
     }
 }
